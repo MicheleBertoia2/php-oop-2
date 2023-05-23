@@ -1,14 +1,22 @@
 <?php
 
+require_once __DIR__ . '/Category.php';
+
 class Product {
   protected $image;
   protected $title;
   protected $price;
   protected $description;
+  protected $category;
 
-  function __construct($_title, $_price){
+  function __construct($_title, $_price, Category $_category){
     $this->setTitle($_title);
     $this->setPrice($_price);
+    $this->setCategory($_category);
+  }
+
+    public function setCategory($_category){
+    $this->category = $_category;
   }
   
     public function setImage($_image){
@@ -42,6 +50,12 @@ class Product {
     public function getDescription(){
      return  $this->description;
     }
+
+    
+    public function getCategory(){
+     return $this->category;
+    }
+
     
 
 }

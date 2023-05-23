@@ -3,28 +3,29 @@
 require_once __DIR__ . '/Product.php';
 
 class Food extends Product {
-  protected $category;
-  protected $type;
+  protected $ingredients;
+  protected $weight;
 
-  function __construct($_category, $_title, $_price)
+  function __construct($_title, $_price)
   {
-    parent::__construct($_title, $_price);
-    $this->setCategory($_category);
+    parent::__construct($_title, $_price, new Category);
   }
 
-  public function setCategory($_category){
-    $this->category = $_category;
+
+  public function setType($_ingredients){
+    $this->ingredients = $_ingredients;
   }
 
-  public function setType($_type){
-    $this->type = $_type;
+  public function setWeight($_weight){
+    $this->weight = $_weight;
   }
 
-  public function getCategory(){
-    return $this->category;
+
+  public function getIngredients(){
+    return $this->ingredients;
    }
 
-  public function getType(){
-    return $this->type;
+  public function getWeight(){
+    return $this->weight;
    }
 }

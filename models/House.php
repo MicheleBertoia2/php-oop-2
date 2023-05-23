@@ -3,28 +3,30 @@
 require_once __DIR__ . '/Product.php';
 
 class House extends Product {
-  protected $category;
   protected $material;
+  protected $dimensions;
 
-  function __construct($_category, $_title, $_price)
+  function __construct($_title, $_price)
   {
-    parent::__construct($_title, $_price);
-    $this->setCategory($_category);
+    parent::__construct($_title, $_price, new Category);
   }
 
-  public function setCategory($_category){
-    $this->category = $_category;
-  }
 
   public function setMaterial($_material){
     $this->material = $_material;
   }
 
-  public function getCategory(){
-    return $this->category;
-   }
+  public function setDimensions($_dimensions){
+    $this->dimensions = $_dimensions;
+  }
+
 
   public function getMaterial(){
     return $this->material;
    }
+   
+   public function getDimensions(){
+     return $this->dimensions;
+    }
 }
+
