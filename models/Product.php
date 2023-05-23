@@ -5,7 +5,7 @@ class Product {
   protected $image;
   protected $title;
   protected $price;
-  protected $description;
+  public $description;
   protected $category;
 
   function __construct($_title, $_price,){
@@ -46,7 +46,8 @@ class Product {
     }
 
     public function getDescription(){
-     return  $this->description;
+    //  return  ($this->description) ? $this->description : "niente";
+    return $this->description;
     }
 
     

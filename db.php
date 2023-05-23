@@ -8,5 +8,4 @@ $products = [
   new Toy("papera di gomma","5.99","cat")
 ];
 
-var_dump($products);
-die();
+// var_dump($products);
