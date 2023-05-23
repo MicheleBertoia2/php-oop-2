@@ -6,9 +6,11 @@ class Food extends Product {
   protected $ingredients;
   protected $weight;
 
-  function __construct($_title, $_price)
+  function __construct($_title, $_price,$_category)
   {
-    parent::__construct($_title, $_price, new Category);
+    parent::__construct($_title, $_price,);
+    $this->setCategory($_category);
+
   }
 
 

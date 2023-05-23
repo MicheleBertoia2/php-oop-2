@@ -1,6 +1,5 @@
 <?php
 
-require_once __DIR__ . '/Category.php';
 
 class Product {
   protected $image;
@@ -9,10 +8,9 @@ class Product {
   protected $description;
   protected $category;
 
-  function __construct($_title, $_price, Category $_category){
+  function __construct($_title, $_price,){
     $this->setTitle($_title);
     $this->setPrice($_price);
-    $this->setCategory($_category);
   }
 
     public function setCategory($_category){
